@@ -1,6 +1,11 @@
 <template>
-   <div>
-    <ProductDetails :product="product"/>
+    <div>
+    <Head>
+      <Title>Nuxt Ecommerce | {{ product.title }}</Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
+    
+    <ProductDetails :product="product" />
   </div>
 </template>
 
