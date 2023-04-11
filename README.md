@@ -39,4 +39,16 @@ Locally preview production build:
 npm run preview
 ```
 
+
+# Usage
+You can try the server api endpoint at
+
+```
+localhost:port/api/products
+localhost:port/api/products/1
+
+localhost:port/api/store
+
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
