@@ -1,12 +1,17 @@
 <template>
-  <div>
-    <h2>Product - {{ $route.params.id }}</h2>
-    <h2>Product - {{ id }}</h2>
+   <div>
+    <p>{{ product.title }}</p>
+    <p>{{ product.price }}</p>
+    <p>{{ product.id }}</p>
   </div>
 </template>
 
 <script setup>
   const { id } = useRoute().params
+  const uri = `https://fakestoreapi.com/products/${id}`;
+
+  const { data: product } = await useFetch(uri, {key: id} );
+
 </script>
 
 <style lang="scss" scoped>
